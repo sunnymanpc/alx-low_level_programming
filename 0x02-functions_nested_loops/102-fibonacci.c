@@ -22,7 +22,7 @@ int main(void)
 			b = sum;
 
 
-			if (count == 49)
+			if (c == 49)
 			printf("\n");
 			else
 			printf(", ");
