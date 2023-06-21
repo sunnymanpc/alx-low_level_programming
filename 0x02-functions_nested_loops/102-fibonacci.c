@@ -6,27 +6,28 @@
 *
 * Return: Always 0.
 */
-int main(void)
-{
-	int c;
-	unsigned long a = 0, b = 1, sum;
+	int main(void)
+	{
+		int count;
+		unsigned long fib1 = 0, fib2 = 1, sum;
 
 
-		for (c = 0; c < 50; c++)
+		for (count = 0; count < 50; count++)
 		{
-			sum = a + b;
-			printf("%d", sum);
+			sum = fib1 + fib2;
+			printf("%lu", sum);
 
 
-			a = b;
-			b = sum;
+			fib1 = fib2;
+			fib2 = sum;
 
 
-			if (c == 49)
-			printf("\n");
+			if (count == 49)
+				printf("\n");
 			else
-			printf(", ");
+				printf(", ");
 		}
 
-	return (0);
-}
+
+		return (0);
+	}
