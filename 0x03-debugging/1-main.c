@@ -17,7 +17,7 @@ int main(void)
 	/*putchar(i):*/
 	/*}*/
 
-	printf("Ininite loop avoided! \\o/n");
+	printf("Ininite loop avoided! \\o/\n");
 
 	return (0);
 }
