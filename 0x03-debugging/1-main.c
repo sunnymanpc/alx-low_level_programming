@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-* main - cause an infinit loop
+* main - causes an infinit loop
 * Return: 0
 */
 int main(void)
@@ -16,8 +16,7 @@ int main(void)
 	/*{*/
 	/*putchar(i):*/
 	/*}*/
-
-	printf("Ininite loop avoided! \\o/\n");
+	printf("Ininite loop avoided!\\o/\n");
 
 	return (0);
 }
