@@ -5,15 +5,15 @@
 #include <stdio.h>
 
 /**
- * struct listint_s - Is a singly linked list
- * @o: is an integer
- * @next: Points to the next node
+ * struct listint_s - This is a singly linked list
+ * @n: This is an integer
+ * @next: This points to the next node
  *
  * Description: is a singly linked list node structure
  */
 typedef struct listint_s
 {
-	int o;
+	int n;
 	struct listint_s *next;
 } listint_t;
 
