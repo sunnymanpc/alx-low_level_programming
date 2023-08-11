@@ -97,13 +97,13 @@ void print_data(unsigned char *elf_id)
 	switch (elf_id[EI_DATA])
 	{
 	case ELFDATANONE:
-		printf("none\n");
+		printf("None\n");
 		break;
 	case ELFDATA2LSB:
-		printf("2's complement, little endian\n");
+		printf("2 is complement, little endian\n");
 		break;
 	case ELFDATA2MSB:
-		printf("2's complement, big endian\n");
+		printf("2 is complement, big endian\n");
 		break;
 	default:
 		printf("<unknown: %x>\n", elf_id[EI_CLASS]);
@@ -122,7 +122,7 @@ void print_version(unsigned char *elf_id)
 	switch (elf_id[EI_VERSION])
 	{
 	case EV_CURRENT:
-		printf(" (current)\n");
+		printf(" (Current)\n");
 		break;
 	default:
 		printf("\n");
@@ -288,17 +288,16 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		exit(98);
 	}
 
-	chk_elf(header->elf_id);
+	chk_elf(header->e_ident);
 	printf("ELF Header:\n");
-	print_magic(header->elf_id);
-	print_class(header->elf_id);
-	print_data(header->elf_id);
-	print_version(header->elf_id);
-	print_osabi(header->elf_id);
-	print_abi(header->elf_id);
-	print_type(header->elf_type, header->elf_id);
-	print_entry(header->elf_ent, header->elf_id);
-
+	print_magic(header->e_ident);
+	print_class(header->e_ident);
+	print_data(header->e_ident);
+	print_version(header->e_ident);
+	print_osabi(header->e_ident);
+	print_abi(header->e_ident);
+	print_type(header->e_type, header->e_ident);
+	print_entry(header->e_entry, header->e_ident);
 	free(header);
 	close_elf(a);
 	return (0);
